@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:jdbc:mysql://localhost:3306/finance_manage?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD}
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.finance.manage.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+file:
+  upload:
+    path: ${UPLOAD_PATH:./uploads}
+    url: ${DB_URL:jdbc:mysql://localhost:3306/finance_manage?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai}

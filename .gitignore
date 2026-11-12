@@ -1,0 +1,29 @@
+# Dependencies and build outputs
+**/node_modules/
+**/target/
+**/dist/
+**/coverage/
+
+# Local tools and configuration
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+**/application-local.yml
+**/application-local.yaml
+**/application-local.properties
+
+# Credentials and local runtime data
+*.pem
+*.key
+*.p12
+*.pfx
+**/uploads/
+*.log
+*.zip
+*.rar
+/database/*dump*.sql
